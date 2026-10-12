@@ -16,4 +16,4 @@
 - Do konce pololetí - vytvoříme **kouzelné interaktivní itemy**, jako kouzelné hůlky, brnění
 - Do Velikonoc - vytvoříme kouzelné **moby** pro ozvláštnění bojového systému
 - Do konce školního roku - vytvoříme nový přirozeně generující **biom** a **strukturu**
--Bonus (při dostatku času) - ukazatel many, kterou kouzelné předměty budou využívat; nového kouzelného **bosse**; nové přirozeně generující ores; příručku, která hráče Kouzelným Minecraftem provede
+- Bonus (při dostatku času) - ukazatel many, kterou kouzelné předměty budou využívat; nového kouzelného **bosse**; nové přirozeně generující ores; příručku, která hráče Kouzelným Minecraftem provede
