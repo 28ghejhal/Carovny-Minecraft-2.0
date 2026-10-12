@@ -1,4 +1,4 @@
-# Carovny-Minecraft-2.0
+# Kouzelný Minecraft
 ## Cíl projektu:
 - Vytvořit **mód** pro hru **Minecraft** na verzi 1.20 s magickou tématikou inspirovaný již existujícím módem Thaumcraft
 
@@ -12,9 +12,8 @@
 
 ## Jak toho dosáhneme:
 - Naučíme se vytvářet mód pro Minecraft z mnoha video návodu na platformě Youtube
-- Vytvoříme **ukazatel many** pro vyvolávání kouzel
-- Vytvoříme **kouzelné itemy**, jako kouzelné hůlky, brnění, které budou manu používat
-- Vytvoříme nové přirozeně generující bloky pro výrobu nových předmětů, jako **ores**, dřevo
-- Vytvoříme nový přirozeně generující **biom**
-- Vytvoříme kouzelné **moby** pro ozvláštnění bojového systému, nejspíše i nového bosse
-- Při dostatku času vytvoříme knihu s návodem progresu pro lepší orientaci v módu
+- Do Vánoc - připravíme si zdrojový kód pro celý mód
+- Do konce pololetí - vytvoříme **kouzelné interaktivní itemy**, jako kouzelné hůlky, brnění
+- Do Velikonoc - vytvoříme kouzelné **moby** pro ozvláštnění bojového systému
+- Do konce školního roku - vytvoříme nový přirozeně generující **biom** a **strukturu**
+-Bonus (při dostatku času) - ukazatel many, kterou kouzelné předměty budou využívat; nového kouzelného **bosse**; nové přirozeně generující ores; příručku, která hráče Kouzelným Minecraftem provede
