@@ -1,5 +1,6 @@
-# Sif 2026/27 - projekt Kouzelný Minecraft - Štros, Hejhal
+# projekt Kouzelný Minecraft
 ## Cíl projektu:
+- Studenti František Štros a Maxmilián TObiáš Hejhal vytvoří vlastní projekt na seminář informatiky 2026/27
 - Vytvořit **mód** pro hru **Minecraft** na verzi 1.20 s magickou tématikou inspirovaný již existujícím módem Thaumcraft
 
 
