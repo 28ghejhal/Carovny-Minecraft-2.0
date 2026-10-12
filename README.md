@@ -1,4 +1,4 @@
-# Kouzelný Minecraft
+# Sif 2026/27 - projekt Kouzelný Minecraft - Štros, Hejhal
 ## Cíl projektu:
 - Vytvořit **mód** pro hru **Minecraft** na verzi 1.20 s magickou tématikou inspirovaný již existujícím módem Thaumcraft
 
@@ -12,7 +12,7 @@
 
 ## Jak toho dosáhneme:
 - Naučíme se vytvářet mód pro Minecraft z mnoha video návodu na platformě Youtube
-- Do Vánoc - připravíme si zdrojový kód pro celý mód
+- Do Vánoc - připravíme si **zdrojový kód** pro celý mód
 - Do konce pololetí - vytvoříme **kouzelné interaktivní itemy**, jako kouzelné hůlky, brnění
 - Do Velikonoc - vytvoříme kouzelné **moby** pro ozvláštnění bojového systému
 - Do konce školního roku - vytvoříme nový přirozeně generující **biom** a **strukturu**
