@@ -1,4 +1,4 @@
-# projekt Kouzelný Minecraft
+# Kouzelný Minecraft
 ## Cíl projektu:
 - Studenti František Štros a Maxmilián Tobiáš Hejhal vytvoří vlastní projekt na seminář informatiky 2026/27
 - Vytvořit **mód** pro hru **Minecraft** na verzi 1.20 s magickou tématikou inspirovaný již existujícím módem Thaumcraft
