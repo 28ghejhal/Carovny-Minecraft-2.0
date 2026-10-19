@@ -5,10 +5,11 @@
 
 
 ## Co použijeme:
-- programovací jazyk **Java** v aplikaci Visual Studio Code
-- webový nástroj Blockbench na vytváření 3D modelů
-- webový nástroj pro kreslení textur pro 2D itemy - nejspíše nástroj Resource Pak Creator
-- případně použití AI pro výrobu 3D modelů a 2D textur
+- Programovací jazyk **Java** v aplikaci Visual Studio Code
+- Webový nástroj Blockbench na vytváření 3D modelů
+- Webový nástroj pro kreslení textur pro 2D itemy - nejspíše nástroj Resource Pak Creator
+- Případně použití AI pro výrobu 3D modelů a 2D textur
+- Pro distribuci použijeme aplikaci Curseforge pod záštitou účtu: [Tobiáše](https://www.curseforge.com/members/user_0l0uzy7rm4pk0zu8/projects)
 
 
 ## Jak toho dosáhneme:
