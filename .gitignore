@@ -1,13 +1,25 @@
-# macOS
-.DS_Store
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-# Windows
-Thumbs.db
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
 
-# Python
-__pycache__/
-*.pyc
+# gradle
+build
+.gradle
 
-# Editor
-.vscode/
-.idea/
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
