@@ -13,7 +13,7 @@
 
 
 ## Jak toho dosáhneme:
-- Naučíme se vytvářet mód pro Minecraft z mnoha video návodu na platformě Youtube
+- Naučíme se vytvářet mód pro Minecraft z mnoha video návodu na platformě Youtube - Studijní materiál: [Forge modding tutorial](https://www.youtube.com/watch?v=55qUIf3GMss&list=PLKGarocXCE1H9Y21-pxjt5Pt8bW14twa-&index=2)
 - Do Vánoc - připravíme si **zdrojový kód** pro celý mód
 - Do konce pololetí - vytvoříme **kouzelné interaktivní itemy**, jako kouzelné hůlky, brnění
 - Do Velikonoc - vytvoříme kouzelné **moby** pro ozvláštnění bojového systému
