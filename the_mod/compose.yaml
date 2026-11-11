@@ -1,0 +1,57 @@
+services:
+  # ---------------------------------------------------------------
+  # SERVER: Minecraft server s tvým módem (běží na pozadí)
+  # ---------------------------------------------------------------
+  server:
+    build:
+      context: .
+      target: server
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: "FORGE"        # nebo FABRIC
+      VERSION: "1.20.1"    # musí sedět na Javu 17 (1.18 - 1.20.4)
+      # MODRINTH_PROJECTS: "fabric-api"   # u Fabricu přidej knihovnu Fabric API
+    volumes:
+      - ./server-data:/data
+    stdin_open: true
+    tty: true
+
+  # ---------------------------------------------------------------
+  # CLIENT: Minecraft klient, okno se zobrazí na ploše Windows (WSLg)
+  # ---------------------------------------------------------------
+  client:
+    build:
+      context: .
+      target: client
+    environment:
+      DISPLAY: ":0"                              # X server z WSLg
+      XDG_RUNTIME_DIR: "/mnt/wslg/runtime-dir"
+      PULSE_SERVER: "/mnt/wslg/PulseServer"      # zvuk přes WSLg
+
+      # --- Volitelně: GPU místo softwarového renderu (viz poznámky) ---
+      # LD_LIBRARY_PATH: "/usr/lib/wsl/lib"
+      # GALLIUM_DRIVER: "d3d12"
+    volumes:
+      - .:/project
+      - gradle-cache:/root/.gradle
+
+      # Sdílení displeje a zvuku z WSLg (Docker Desktop + WSL2 backend).
+      # Při Dockeru nainstalovaném přímo v distribuci WSL použij místo
+      # těchto dvou řádků:
+      #   - /tmp/.X11-unix:/tmp/.X11-unix
+      #   - /mnt/wslg:/mnt/wslg
+      - /run/desktop/mnt/host/wslg/.X11-unix:/tmp/.X11-unix
+      - /run/desktop/mnt/host/wslg:/mnt/wslg
+
+      # --- Volitelně: GPU (spolu s řádkem "devices" níže) ---
+      # - /usr/lib/wsl:/usr/lib/wsl
+    # --- Volitelně: GPU ---
+    # devices:
+    #   - /dev/dxg:/dev/dxg
+    shm_size: 1gb
+    command: /project/docker/start-client.sh
+    profiles: ["client"]
+
+volumes:
+  gradle-cache:
