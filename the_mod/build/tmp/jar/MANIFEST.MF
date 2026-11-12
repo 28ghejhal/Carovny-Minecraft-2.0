@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: examplemod
-Specification-Vendor: YourNameHere, OtherNameHere
-Specification-Version: 1
-Implementation-Title: the_mod
-Implementation-Version: 1.0.0
-Implementation-Vendor: YourNameHere, OtherNameHere
-Implementation-Timestamp: 2026-10-26T09:32:42+0100
-

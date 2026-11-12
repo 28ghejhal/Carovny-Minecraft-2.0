@@ -1,0 +1,120 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 2026-11-09 07:50:19
+Description: Initializing game
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.booleanValue()" because the return value of "net.minecraftforge.fml.loading.FMLConfig$ConfigValue.getConfigValue(com.electronwill.nightconfig.core.file.CommentedFileConfig)" is null
+	at net.minecraftforge.fml.earlydisplay.DisplayWindow.setupMinecraftWindow(DisplayWindow.java:544) ~[fmlearlydisplay-1.20.1-47.4.28.jar:1.0] {}
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler$Wrapper.setupMinecraftWindow(ImmediateWindowHandler.java:216) ~[fmlloader-1.20.1-47.4.28.jar:1.0] {}
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler.setupMinecraftWindow(ImmediateWindowHandler.java:72) ~[fmlloader-1.20.1-47.4.28.jar:1.0] {}
+	at com.mojang.blaze3d.platform.Window.<init>(Window.java:86) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar:?] {re:classloading}
+	at net.minecraft.client.renderer.VirtualScreen.newWindow(VirtualScreen.java:21) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar:?] {re:classloading}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:440) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar:?] {re:classloading}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+Caused by: java.util.concurrent.ExecutionException: java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.booleanValue()" because the return value of "net.minecraftforge.fml.loading.FMLConfig$ConfigValue.getConfigValue(com.electronwill.nightconfig.core.file.CommentedFileConfig)" is null
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?] {}
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205) ~[?:?] {}
+	at net.minecraftforge.fml.earlydisplay.DisplayWindow.setupMinecraftWindow(DisplayWindow.java:542) ~[fmlearlydisplay-1.20.1-47.4.28.jar:1.0] {}
+	... 22 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.booleanValue()" because the return value of "net.minecraftforge.fml.loading.FMLConfig$ConfigValue.getConfigValue(com.electronwill.nightconfig.core.file.CommentedFileConfig)" is null
+	at net.minecraftforge.fml.loading.FMLConfig.getBoolConfigValue(FMLConfig.java:140) ~[fmlloader-1.20.1-47.4.28.jar:1.0] {}
+	at net.minecraftforge.fml.earlydisplay.DisplayWindow.initRender(DisplayWindow.java:240) ~[fmlearlydisplay-1.20.1-47.4.28.jar:1.0] {}
+	at net.minecraftforge.fml.earlydisplay.DisplayWindow.lambda$start$5(DisplayWindow.java:292) ~[fmlearlydisplay-1.20.1-47.4.28.jar:1.0] {}
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?] {}
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?] {}
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?] {}
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?] {}
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?] {}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mods: NONE
+Stacktrace:
+	at net.minecraftforge.fml.earlydisplay.DisplayWindow.setupMinecraftWindow(DisplayWindow.java:544) ~[fmlearlydisplay-1.20.1-47.4.28.jar%2390!/:1.0] {}
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler$Wrapper.setupMinecraftWindow(ImmediateWindowHandler.java:216) ~[fmlloader-1.20.1-47.4.28.jar%2391!/:1.0] {}
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler.setupMinecraftWindow(ImmediateWindowHandler.java:72) ~[fmlloader-1.20.1-47.4.28.jar%2391!/:1.0] {}
+	at com.mojang.blaze3d.platform.Window.<init>(Window.java:86) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23181!/:?] {re:classloading}
+	at net.minecraft.client.renderer.VirtualScreen.newWindow(VirtualScreen.java:21) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23181!/:?] {re:classloading}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:440) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+-- Initialization --
+Details:
+	Modules: 
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.4.28_mapped_official_1.20.1.jar:?] {re:classloading}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.28.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 6.18.54.1-microsoft-standard-WSL2
+	Java Version: 17.0.20.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 402258640 bytes (383 MiB) / 600834048 bytes (573 MiB) up to 2002780160 bytes (1910 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz
+	Identifier: Intel64 Family 6 Model 140 Stepping 1
+	Microarchitecture: Tiger Lake
+	Frequency (GHz): 2.60
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 5865.84
+	Virtual memory used (MB): 2216.50
+	Swap memory total (MB): 2048.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 0 total; 
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: Unknown
+	Window size: <not initialized>
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	CPU: <unknown>
