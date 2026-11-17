@@ -1,4 +1,4 @@
-package net.fratob.fratob_witchery;
+package net.fratob.witchery;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -30,8 +30,7 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Witchery.MODID)
-public class Witchery
-{
+public class Witchery {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "fratob_witchery";
     // Directly reference a slf4j logger
