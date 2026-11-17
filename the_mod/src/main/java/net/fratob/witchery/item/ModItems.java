@@ -5,11 +5,21 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
 
 public class ModItems {
+    // Create ITEMS (From regular Minecraft) ready for register new items
     public static final DeferredRegister<Item> ITEMS =
-        DeferredRegister.create(ForgeRegistries.ITEMS, Witchery.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, Witchery.MODID);
 
+    // Register white_berry item with properties
+    public static final RegistryObject<Item> WHITE_BERRY = ITEMS.register("white_berry", 
+            () -> new Item(new Item.Properties()));
+
+
+
+    // Register ModItems to Minecraft through Witchery.java
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

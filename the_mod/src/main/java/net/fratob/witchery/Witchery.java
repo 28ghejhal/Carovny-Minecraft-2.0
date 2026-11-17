@@ -1,6 +1,9 @@
 package net.fratob.witchery;
 
 import com.mojang.logging.LogUtils;
+
+import net.fratob.witchery.item.ModCreativeModTabs;
+import net.fratob.witchery.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -28,26 +31,31 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// The value here should match an entry in the META-INF/mods.toml file*
 @Mod(Witchery.MODID)
 public class Witchery {
-    // Define mod id in a common place for everything to reference
+    // Define mod id in a common place for everything to reference*
     public static final String MODID = "fratob_witchery";
-    // Directly reference a slf4j logger
+    // Directly reference a slf4j logger*
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Witchery(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        // Register the commonSetup method for modloading
+        // Register new Creative Mod Tab (Same process with items)
+        ModCreativeModTabs.register(modEventBus);
+        // Register ModItems
+        ModItems.register(modEventBus);
+
+        // Register the commonSetup method for modloading*
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // Register the item to a creative tab*
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
+        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us*
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -55,17 +63,20 @@ public class Witchery {
 
     }
 
+    // Method that everytime that user open creative inventory add items (White_Berry) to the Ingredients Tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.WHITE_BERRY);
+        }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    // You can use SubscribeEvent and let the Event Bus discover methods to call*
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent*
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
