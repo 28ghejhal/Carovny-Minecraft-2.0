@@ -65,8 +65,8 @@ public class Witchery {
 
     // Method that everytime that user open creative inventory add items (White_Berry) to the Ingredients Tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.WHITE_BERRY);
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.WHITE_BERRIES);
         }
     }
 

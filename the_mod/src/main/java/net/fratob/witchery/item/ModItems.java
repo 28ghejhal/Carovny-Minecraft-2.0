@@ -14,7 +14,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Witchery.MODID);
 
     // Register white_berry item with properties
-    public static final RegistryObject<Item> WHITE_BERRY = ITEMS.register("white_berry", 
+    public static final RegistryObject<Item> WHITE_BERRIES = ITEMS.register("white_berries", 
             () -> new Item(new Item.Properties()));
 
 
