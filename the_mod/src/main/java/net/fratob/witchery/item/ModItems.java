@@ -1,21 +1,22 @@
 package net.fratob.witchery.item;
 
 import net.fratob.witchery.Witchery;
+import net.fratob.witchery.block.ModBlocks;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-
 public class ModItems {
     // Create ITEMS (From regular Minecraft) ready for register new items
-    public static final DeferredRegister<Item> ITEMS =
+    public static final DeferredRegister<Item> ITEMS = 
             DeferredRegister.create(ForgeRegistries.ITEMS, Witchery.MODID);
 
     // Register white_berry item with properties
     public static final RegistryObject<Item> WHITE_BERRIES = ITEMS.register("white_berries", 
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.WHITE_BERRY_BUSH.get(), new Item.Properties().food(ModFoods.WHITE_BERRIES)));
     public static final RegistryObject<Item> MANA_BERRIES = ITEMS.register("mana_berries", 
             () -> new Item(new Item.Properties()));
 
