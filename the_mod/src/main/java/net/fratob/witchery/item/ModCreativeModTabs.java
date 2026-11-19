@@ -23,8 +23,9 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> {
                         // Custom Item
                         pOutput.accept(ModItems.WHITE_BERRIES.get());
+                        pOutput.accept(ModItems.MANA_BERRIES.get());
 
-                        // Regulat Item
+                        // Regular Item
                         pOutput.accept(Items.GLOW_BERRIES);
 
                     })

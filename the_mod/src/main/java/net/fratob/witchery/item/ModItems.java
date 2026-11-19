@@ -16,6 +16,8 @@ public class ModItems {
     // Register white_berry item with properties
     public static final RegistryObject<Item> WHITE_BERRIES = ITEMS.register("white_berries", 
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MANA_BERRIES = ITEMS.register("mana_berries", 
+            () -> new Item(new Item.Properties()));
 
 
 
