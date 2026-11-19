@@ -17,12 +17,12 @@ public class ModCreativeModTabs {
 
     // Add Witchery tab with icon texture of White Berry
     public static final RegistryObject<CreativeModeTab> WITCHERY_TAB = CREATIVE_MOD_TABS.register("witchery_tab", 
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WHITE_BERRY.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WHITE_BERRIES.get()))
                     .title(Component.translatable("creativetab.witchery_tab"))
                     // Define items that you want in a tab
                     .displayItems((pParameters, pOutput) -> {
                         // Custom Item
-                        pOutput.accept(ModItems.WHITE_BERRY.get());
+                        pOutput.accept(ModItems.WHITE_BERRIES.get());
 
                         // Regulat Item
                         pOutput.accept(Items.GLOW_BERRIES);
