@@ -2,7 +2,6 @@ package net.fratob.witchery.block.custom;
 
 import net.fratob.witchery.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -134,12 +133,13 @@ public class ManaBerryBushBlock extends BushBlock implements BonemealableBlock {
       pLevel.setBlock(pPos, pState.setValue(AGE, Integer.valueOf(i)), 2);
    }
 
+// Adds new particle called Blue Dust
 private static final DustParticleOptions BLUE_DUST =
-        new DustParticleOptions(new Vector3f(0.2F, 0.5F, 1.0F), 1.0F);
+        new DustParticleOptions(new Vector3f(0.2F, 0.8F, 1.0F), 1.0F);
 
 public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
    double d0 = (double)pPos.getX() + 0.55D - (double)(pRandom.nextFloat() * 0.5F);
-   double d1 = (double)pPos.getY() + 0.55D - (double)(pRandom.nextFloat() * 0.5F);
+   double d1 = (double)pPos.getY() + 0.8D - (double)(pRandom.nextFloat() * 0.5F);
    double d2 = (double)pPos.getZ() + 0.55D - (double)(pRandom.nextFloat() * 0.5F);
    if (pRandom.nextInt(5) == 0) {
       pLevel.addParticle(BLUE_DUST, d0, d1, d2, 0.0D, 0.0D, 0.0D);
