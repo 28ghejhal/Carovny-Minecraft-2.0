@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import net.fratob.witchery.Witchery;
 import net.fratob.witchery.block.custom.WhiteBerryBushBlock;
+import net.fratob.witchery.block.custom.ManaBerryBushBlock;
 import net.fratob.witchery.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,7 +27,7 @@ public class ModBlocks {
             () -> new WhiteBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
     public static final RegistryObject<Block> MANA_BERRY_BUSH = BLOCKS.register("mana_berry_bush",
-            () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+            () -> new ManaBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
 
 
