@@ -18,7 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item> WHITE_BERRIES = ITEMS.register("white_berries", 
             () -> new ItemNameBlockItem(ModBlocks.WHITE_BERRY_BUSH.get(), new Item.Properties().food(ModFoods.WHITE_BERRIES)));
     public static final RegistryObject<Item> MANA_BERRIES = ITEMS.register("mana_berries", 
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.MANA_BERRY_BUSH.get(), new Item.Properties()));
 
 
 

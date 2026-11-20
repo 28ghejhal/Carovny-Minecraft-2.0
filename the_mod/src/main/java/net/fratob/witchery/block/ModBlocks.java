@@ -24,6 +24,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> WHITE_BERRY_BUSH = BLOCKS.register("white_berry_bush",
             () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
+    public static final RegistryObject<Block> MANA_BERRY_BUSH = BLOCKS.register("mana_berry_bush",
+            () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
 
 
     // Helper method - Register block as block and also call registerBlockItem method 
