@@ -1,0 +1,61 @@
+package net.minecraft.client.particle;
+
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+public class AttackSweepParticle extends TextureSheetParticle {
+   private final SpriteSet sprites;
+
+   AttackSweepParticle(ClientLevel p_105546_, double p_105547_, double p_105548_, double p_105549_, double p_105550_, SpriteSet p_105551_) {
+      super(p_105546_, p_105547_, p_105548_, p_105549_, (double)0.0F, (double)0.0F, (double)0.0F);
+      this.sprites = p_105551_;
+      this.lifetime = 4;
+      float $$6 = this.random.nextFloat() * 0.6F + 0.4F;
+      this.rCol = $$6;
+      this.gCol = $$6;
+      this.bCol = $$6;
+      this.quadSize = 1.0F - (float)p_105550_ * 0.5F;
+      this.setSpriteFromAge(p_105551_);
+   }
+
+   public int getLightColor(float p_105562_) {
+      return 15728880;
+   }
+
+   public void tick() {
+      this.xo = this.x;
+      this.yo = this.y;
+      this.zo = this.z;
+      if (this.age++ >= this.lifetime) {
+         this.remove();
+      } else {
+         this.setSpriteFromAge(this.sprites);
+      }
+   }
+
+   public ParticleRenderType getRenderType() {
+      return ParticleRenderType.PARTICLE_SHEET_LIT;
+   }
+
+   @OnlyIn(Dist.CLIENT)
+   public static class Provider implements ParticleProvider<SimpleParticleType> {
+      private final SpriteSet sprites;
+
+      public Provider(SpriteSet p_105566_) {
+         this.sprites = p_105566_;
+      }
+
+      public Particle createParticle(SimpleParticleType p_105577_, ClientLevel p_105578_, double p_105579_, double p_105580_, double p_105581_, double p_105582_, double p_105583_, double p_105584_) {
+         return new AttackSweepParticle(p_105578_, p_105579_, p_105580_, p_105581_, p_105582_, this.sprites);
+      }
+
+      // $FF: synthetic method
+      public Particle createParticle(ParticleOptions var1, ClientLevel var2, double var3, double var5, double var7, double var9, double var11, double var13) {
+         return this.createParticle((SimpleParticleType)var1, var2, var3, var5, var7, var9, var11, var13);
+      }
+   }
+}
