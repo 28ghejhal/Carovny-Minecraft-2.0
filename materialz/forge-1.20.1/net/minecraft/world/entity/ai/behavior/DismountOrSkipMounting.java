@@ -1,0 +1,33 @@
+package net.minecraft.world.entity.ai.behavior;
+
+import java.util.function.BiPredicate;
+import java.util.function.Function;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+
+public class DismountOrSkipMounting {
+   public static <E extends LivingEntity> BehaviorControl<E> create(int p_259945_, BiPredicate<E, Entity> p_259837_) {
+      return BehaviorBuilder.create((Function)((p_259780_) -> p_259780_.group(p_259780_.registered(MemoryModuleType.RIDE_TARGET)).apply(p_259780_, (p_259326_) -> (p_259287_, p_259246_, p_259462_) -> {
+               Entity $$7 = p_259246_.getVehicle();
+               Entity $$8 = (Entity)p_259780_.tryGet(p_259326_).orElse((Object)null);
+               if ($$7 == null && $$8 == null) {
+                  return false;
+               } else {
+                  Entity $$9 = $$7 == null ? $$8 : $$7;
+                  if (isVehicleValid(p_259246_, $$9, p_259945_) && !p_259837_.test(p_259246_, $$9)) {
+                     return false;
+                  } else {
+                     p_259246_.stopRiding();
+                     p_259326_.erase();
+                     return true;
+                  }
+               }
+            })));
+   }
+
+   private static boolean isVehicleValid(LivingEntity p_259293_, Entity p_260023_, int p_259048_) {
+      return p_260023_.isAlive() && p_260023_.closerThan(p_259293_, (double)p_259048_) && p_260023_.level() == p_259293_.level();
+   }
+}

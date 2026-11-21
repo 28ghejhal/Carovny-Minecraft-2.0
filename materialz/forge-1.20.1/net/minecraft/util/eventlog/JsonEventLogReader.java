@@ -1,0 +1,45 @@
+package net.minecraft.util.eventlog;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParseException;
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.JsonOps;
+import java.io.Closeable;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.Reader;
+import javax.annotation.Nullable;
+import net.minecraft.Util;
+
+public interface JsonEventLogReader<T> extends Closeable {
+   static <T> JsonEventLogReader<T> create(final Codec<T> p_261600_, Reader p_261836_) {
+      final JsonReader $$2 = new JsonReader(p_261836_);
+      $$2.setLenient(true);
+      return new JsonEventLogReader<T>() {
+         @Nullable
+         public T next() throws IOException {
+            try {
+               if (!$$2.hasNext()) {
+                  return null;
+               } else {
+                  JsonElement $$0 = JsonParser.parseReader($$2);
+                  return (T)Util.getOrThrow(p_261600_.parse(JsonOps.INSTANCE, $$0), IOException::new);
+               }
+            } catch (JsonParseException $$1) {
+               throw new IOException($$1);
+            } catch (EOFException var3) {
+               return null;
+            }
+         }
+
+         public void close() throws IOException {
+            $$2.close();
+         }
+      };
+   }
+
+   @Nullable
+   T next() throws IOException;
+}

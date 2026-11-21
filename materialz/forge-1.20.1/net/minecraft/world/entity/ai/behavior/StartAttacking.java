@@ -1,0 +1,44 @@
+package net.minecraft.world.entity.ai.behavior;
+
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.event.entity.living.LivingChangeTargetEvent;
+
+public class StartAttacking {
+   public static <E extends Mob> BehaviorControl<E> create(Function<E, Optional<? extends LivingEntity>> p_259868_) {
+      return create((p_24212_) -> true, p_259868_);
+   }
+
+   public static <E extends Mob> BehaviorControl<E> create(Predicate<E> p_259618_, Function<E, Optional<? extends LivingEntity>> p_259435_) {
+      return BehaviorBuilder.create((Function)((p_258782_) -> p_258782_.group(p_258782_.absent(MemoryModuleType.ATTACK_TARGET), p_258782_.registered(MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE)).apply(p_258782_, (p_258778_, p_258779_) -> (p_258773_, p_258774_, p_258775_) -> {
+               if (!p_259618_.test(p_258774_)) {
+                  return false;
+               } else {
+                  Optional<? extends LivingEntity> optional = (Optional)p_259435_.apply(p_258774_);
+                  if (optional.isEmpty()) {
+                     return false;
+                  } else {
+                     LivingEntity livingentity = (LivingEntity)optional.get();
+                     if (!p_258774_.canAttack(livingentity)) {
+                        return false;
+                     } else {
+                        LivingChangeTargetEvent changeTargetEvent = ForgeHooks.onLivingChangeTarget(p_258774_, livingentity, LivingChangeTargetEvent.LivingTargetType.BEHAVIOR_TARGET);
+                        if (changeTargetEvent.isCanceled()) {
+                           return false;
+                        } else {
+                           p_258778_.set(changeTargetEvent.getNewTarget());
+                           p_258779_.erase();
+                           return true;
+                        }
+                     }
+                  }
+               }
+            })));
+   }
+}

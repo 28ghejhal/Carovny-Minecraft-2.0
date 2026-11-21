@@ -1,0 +1,140 @@
+package net.minecraft.client.particle;
+
+import java.util.Optional;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.core.particles.ParticleGroup;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+public class SuspendedParticle extends TextureSheetParticle {
+   SuspendedParticle(ClientLevel p_172403_, SpriteSet p_172404_, double p_172405_, double p_172406_, double p_172407_) {
+      super(p_172403_, p_172405_, p_172406_ - (double)0.125F, p_172407_);
+      this.setSize(0.01F, 0.01F);
+      this.pickSprite(p_172404_);
+      this.quadSize *= this.random.nextFloat() * 0.6F + 0.2F;
+      this.lifetime = (int)((double)16.0F / (Math.random() * 0.8 + 0.2));
+      this.hasPhysics = false;
+      this.friction = 1.0F;
+      this.gravity = 0.0F;
+   }
+
+   SuspendedParticle(ClientLevel p_172409_, SpriteSet p_172410_, double p_172411_, double p_172412_, double p_172413_, double p_172414_, double p_172415_, double p_172416_) {
+      super(p_172409_, p_172411_, p_172412_ - (double)0.125F, p_172413_, p_172414_, p_172415_, p_172416_);
+      this.setSize(0.01F, 0.01F);
+      this.pickSprite(p_172410_);
+      this.quadSize *= this.random.nextFloat() * 0.6F + 0.6F;
+      this.lifetime = (int)((double)16.0F / (Math.random() * 0.8 + 0.2));
+      this.hasPhysics = false;
+      this.friction = 1.0F;
+      this.gravity = 0.0F;
+   }
+
+   public ParticleRenderType getRenderType() {
+      return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
+   }
+
+   @OnlyIn(Dist.CLIENT)
+   public static class UnderwaterProvider implements ParticleProvider<SimpleParticleType> {
+      private final SpriteSet sprite;
+
+      public UnderwaterProvider(SpriteSet p_108063_) {
+         this.sprite = p_108063_;
+      }
+
+      public Particle createParticle(SimpleParticleType p_108074_, ClientLevel p_108075_, double p_108076_, double p_108077_, double p_108078_, double p_108079_, double p_108080_, double p_108081_) {
+         SuspendedParticle $$8 = new SuspendedParticle(p_108075_, this.sprite, p_108076_, p_108077_, p_108078_);
+         $$8.setColor(0.4F, 0.4F, 0.7F);
+         return $$8;
+      }
+
+      // $FF: synthetic method
+      public Particle createParticle(ParticleOptions var1, ClientLevel var2, double var3, double var5, double var7, double var9, double var11, double var13) {
+         return this.createParticle((SimpleParticleType)var1, var2, var3, var5, var7, var9, var11, var13);
+      }
+   }
+
+   @OnlyIn(Dist.CLIENT)
+   public static class SporeBlossomAirProvider implements ParticleProvider<SimpleParticleType> {
+      private final SpriteSet sprite;
+
+      public SporeBlossomAirProvider(SpriteSet p_172419_) {
+         this.sprite = p_172419_;
+      }
+
+      public Particle createParticle(SimpleParticleType p_172430_, ClientLevel p_172431_, double p_172432_, double p_172433_, double p_172434_, double p_172435_, double p_172436_, double p_172437_) {
+         SuspendedParticle $$8 = new SuspendedParticle(p_172431_, this.sprite, p_172432_, p_172433_, p_172434_, (double)0.0F, (double)-0.8F, (double)0.0F) {
+            // $FF: synthetic field
+            final SuspendedParticle.SporeBlossomAirProvider this$0;
+
+            {
+               super(p_172441_, p_172442_, p_172443_, p_172444_, p_172445_, p_172446_, p_172447_, p_172448_);
+               this.this$0 = p_172440_;
+            }
+
+            public Optional<ParticleGroup> getParticleGroup() {
+               return Optional.of(ParticleGroup.SPORE_BLOSSOM);
+            }
+         };
+         $$8.lifetime = Mth.randomBetweenInclusive(p_172431_.random, 500, 1000);
+         $$8.gravity = 0.01F;
+         $$8.setColor(0.32F, 0.5F, 0.22F);
+         return $$8;
+      }
+
+      // $FF: synthetic method
+      public Particle createParticle(ParticleOptions var1, ClientLevel var2, double var3, double var5, double var7, double var9, double var11, double var13) {
+         return this.createParticle((SimpleParticleType)var1, var2, var3, var5, var7, var9, var11, var13);
+      }
+   }
+
+   @OnlyIn(Dist.CLIENT)
+   public static class CrimsonSporeProvider implements ParticleProvider<SimpleParticleType> {
+      private final SpriteSet sprite;
+
+      public CrimsonSporeProvider(SpriteSet p_108042_) {
+         this.sprite = p_108042_;
+      }
+
+      public Particle createParticle(SimpleParticleType p_108053_, ClientLevel p_108054_, double p_108055_, double p_108056_, double p_108057_, double p_108058_, double p_108059_, double p_108060_) {
+         RandomSource $$8 = p_108054_.random;
+         double $$9 = $$8.nextGaussian() * (double)1.0E-6F;
+         double $$10 = $$8.nextGaussian() * (double)1.0E-4F;
+         double $$11 = $$8.nextGaussian() * (double)1.0E-6F;
+         SuspendedParticle $$12 = new SuspendedParticle(p_108054_, this.sprite, p_108055_, p_108056_, p_108057_, $$9, $$10, $$11);
+         $$12.setColor(0.9F, 0.4F, 0.5F);
+         return $$12;
+      }
+
+      // $FF: synthetic method
+      public Particle createParticle(ParticleOptions var1, ClientLevel var2, double var3, double var5, double var7, double var9, double var11, double var13) {
+         return this.createParticle((SimpleParticleType)var1, var2, var3, var5, var7, var9, var11, var13);
+      }
+   }
+
+   @OnlyIn(Dist.CLIENT)
+   public static class WarpedSporeProvider implements ParticleProvider<SimpleParticleType> {
+      private final SpriteSet sprite;
+
+      public WarpedSporeProvider(SpriteSet p_108084_) {
+         this.sprite = p_108084_;
+      }
+
+      public Particle createParticle(SimpleParticleType p_108095_, ClientLevel p_108096_, double p_108097_, double p_108098_, double p_108099_, double p_108100_, double p_108101_, double p_108102_) {
+         double $$8 = (double)p_108096_.random.nextFloat() * -1.9 * (double)p_108096_.random.nextFloat() * 0.1;
+         SuspendedParticle $$9 = new SuspendedParticle(p_108096_, this.sprite, p_108097_, p_108098_, p_108099_, (double)0.0F, $$8, (double)0.0F);
+         $$9.setColor(0.1F, 0.1F, 0.3F);
+         $$9.setSize(0.001F, 0.001F);
+         return $$9;
+      }
+
+      // $FF: synthetic method
+      public Particle createParticle(ParticleOptions var1, ClientLevel var2, double var3, double var5, double var7, double var9, double var11, double var13) {
+         return this.createParticle((SimpleParticleType)var1, var2, var3, var5, var7, var9, var11, var13);
+      }
+   }
+}
