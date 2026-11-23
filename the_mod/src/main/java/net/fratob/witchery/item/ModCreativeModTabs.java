@@ -27,6 +27,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.MANA_BERRIES.get());
 
                         pOutput.accept(ModItems.WAND_OF_LIGHT.get());
+                        pOutput.accept(ModItems.CRYSTAL.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_ORE.get());
 

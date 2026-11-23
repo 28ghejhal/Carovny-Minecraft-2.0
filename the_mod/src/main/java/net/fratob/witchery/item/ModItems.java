@@ -23,6 +23,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> WAND_OF_LIGHT = ITEMS.register("wand_of_light", 
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", 
+            () -> new Item(new Item.Properties()));
       
 
 
