@@ -8,6 +8,7 @@ textures = add texture of an item
 
 ## Textures
 Folder for textures of item (or anything else)
+.mcmeta - usage for animations
 
 ## Blockstates
 Says what model should block take when is it placed - Looks for a model that it should use in folder models

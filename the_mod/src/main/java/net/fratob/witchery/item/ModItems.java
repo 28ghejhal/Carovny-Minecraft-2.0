@@ -21,6 +21,10 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.MANA_BERRY_BUSH.get(), new Item.Properties()));
 
 
+    public static final RegistryObject<Item> WAND_OF_LIGHT = ITEMS.register("wand_of_light", 
+            () -> new Item(new Item.Properties()));
+      
+
 
     // Register ModItems to Minecraft through Witchery.java
     public static void register(IEventBus eventBus) {
