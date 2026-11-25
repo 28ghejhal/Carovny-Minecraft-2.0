@@ -6,11 +6,15 @@ import net.fratob.witchery.Witchery;
 import net.fratob.witchery.block.custom.WhiteBerryBushBlock;
 import net.fratob.witchery.block.custom.ManaBerryBushBlock;
 import net.fratob.witchery.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,9 +28,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WHITE_BERRY_BUSH = BLOCKS.register("white_berry_bush",
             () -> new WhiteBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
-
     public static final RegistryObject<Block> MANA_BERRY_BUSH = BLOCKS.register("mana_berry_bush",
             () -> new ManaBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<Block> CRYSTAL_ORE = registerBlock("crystal_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.0F, 3.0F), UniformInt.of(3, 7)));
 
 
 
