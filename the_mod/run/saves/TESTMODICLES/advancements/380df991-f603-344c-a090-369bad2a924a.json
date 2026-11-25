@@ -1,182 +1,205 @@
 {
   "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
-      "unlock_right_away": "2026-11-02 09:21:49 +0100"
+      "unlock_right_away": "2026-11-25 15:58:25 +0100"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:beach": "2026-11-02 09:23:12 +0100",
-      "minecraft:forest": "2026-11-02 09:21:51 +0100"
+      "minecraft:beach": "2026-11-25 15:58:25 +0100"
     },
     "done": false
   },
-  "minecraft:husbandry/root": {
+  "minecraft:recipes/decorations/chest": {
     "criteria": {
-      "consumed_item": "2026-11-02 09:22:39 +0100"
+      "has_lots_of_items": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/charcoal": {
+  "minecraft:recipes/tools/golden_axe": {
     "criteria": {
-      "has_log": "2026-11-02 09:31:11 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/oak_planks": {
+  "minecraft:recipes/tools/golden_pickaxe": {
     "criteria": {
-      "has_logs": "2026-11-02 09:31:11 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/oak_wood": {
+  "minecraft:recipes/misc/gold_nugget": {
     "criteria": {
-      "has_log": "2026-11-02 09:31:11 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/lime_concrete_powder": {
+  "minecraft:recipes/tools/golden_shovel": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
+  "minecraft:recipes/food/golden_apple": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/pink_concrete_powder": {
+  "minecraft:recipes/combat/golden_boots": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/orange_concrete_powder": {
+  "minecraft:recipes/combat/golden_helmet": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/red_concrete_powder": {
+  "minecraft:recipes/combat/golden_sword": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/magenta_concrete_powder": {
+  "minecraft:recipes/building_blocks/gold_block": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/brown_concrete_powder": {
+  "minecraft:recipes/combat/golden_chestplate": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
+  "minecraft:recipes/tools/golden_hoe": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/glass": {
+  "minecraft:recipes/redstone/light_weighted_pressure_plate": {
     "criteria": {
-      "has_smelts_to_glass": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/green_concrete_powder": {
+  "minecraft:recipes/combat/golden_leggings": {
     "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/blue_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/yellow_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/sandstone": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/white_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/gray_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/black_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/purple_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cyan_concrete_powder": {
-    "criteria": {
-      "has_sand": "2026-11-19 18:54:35 +0100"
+      "has_gold_ingot": "2026-11-25 15:58:31 +0100"
     },
     "done": true
   },
   "minecraft:recipes/misc/white_dye": {
     "criteria": {
-      "has_bone_meal": "2026-11-19 20:31:09 +0100"
+      "has_bone_meal": "2026-11-25 16:09:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2026-11-25 16:09:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2026-11-25 16:09:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2026-11-25 16:09:39 +0100"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/bone_block": {
     "criteria": {
-      "has_bone_meal": "2026-11-19 20:31:09 +0100"
+      "has_bone_meal": "2026-11-25 16:09:39 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/chest": {
+  "fratob_witchery:recipes/misc/mana_crystal": {
     "criteria": {
-      "has_lots_of_items": "2026-11-20 20:28:43 +0100"
+      "has_diamond": "2026-11-25 16:17:13 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+  "minecraft:recipes/combat/diamond_leggings": {
     "criteria": {
-      "has_iron_pickaxe": "2026-11-23 22:40:18 +0100"
+      "has_diamond": "2026-11-25 16:17:13 +0100"
     },
     "done": true
   },
-  "minecraft:story/iron_tools": {
+  "minecraft:recipes/combat/diamond_sword": {
     "criteria": {
-      "iron_pickaxe": "2026-11-23 22:40:18 +0100"
+      "has_diamond": "2026-11-25 16:17:13 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+  "minecraft:recipes/decorations/jukebox": {
     "criteria": {
-      "has_iron_pickaxe": "2026-11-23 22:40:18 +0100"
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "fratob_witchery:recipes/tools/wand_of_light": {
+    "criteria": {
+      "has_mana_crystal": "2026-11-25 16:16:54 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2026-11-25 16:17:13 +0100"
     },
     "done": true
   },

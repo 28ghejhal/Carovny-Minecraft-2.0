@@ -25,6 +25,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", 
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MANA_CRYSTAL = ITEMS.register("mana_crystal", 
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MANA_POWDER = ITEMS.register("mana_powder", 
+            () -> new Item(new Item.Properties()));
       
 
 
