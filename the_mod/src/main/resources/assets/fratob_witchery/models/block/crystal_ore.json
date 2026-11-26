@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "fratob_witchery:block/crystal_ore"
-  }
-}

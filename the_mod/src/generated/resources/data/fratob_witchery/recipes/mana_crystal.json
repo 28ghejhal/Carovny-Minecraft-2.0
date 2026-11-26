@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "fratob_witchery:crystal"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "P": {
+      "item": "fratob_witchery:mana_powder"
+    }
+  },
+  "pattern": [
+    "CPC",
+    "PDP",
+    "CPC"
+  ],
+  "result": {
+    "item": "fratob_witchery:mana_crystal"
+  },
+  "show_notification": true
+}
