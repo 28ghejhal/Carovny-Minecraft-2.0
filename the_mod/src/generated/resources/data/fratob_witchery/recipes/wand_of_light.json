@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "fratob_witchery:mana_crystal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  M",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "item": "fratob_witchery:wand_of_light"
+  },
+  "show_notification": true
+}

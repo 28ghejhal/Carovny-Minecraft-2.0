@@ -1,0 +1,4 @@
+// 1.20.1	2026-11-26T18:41:22.3109957	Tags for minecraft:block mod id fratob_witchery
+a926ec3bd0a62c0cce5a490bf89470f9c107f1d3 data/forge/tags/blocks/ores.json
+a926ec3bd0a62c0cce5a490bf89470f9c107f1d3 data/minecraft/tags/blocks/mineable/pickaxe.json
+a926ec3bd0a62c0cce5a490bf89470f9c107f1d3 data/minecraft/tags/blocks/needs_diamond_tool.json

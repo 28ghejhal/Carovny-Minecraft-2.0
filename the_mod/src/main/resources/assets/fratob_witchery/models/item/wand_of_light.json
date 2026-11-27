@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "fratob_witchery:item/wand_of_light"
-    }
-}
