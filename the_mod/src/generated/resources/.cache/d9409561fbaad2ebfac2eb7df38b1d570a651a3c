@@ -1,4 +1,7 @@
-// 1.20.1	2026-11-26T18:41:22.3131398	Block States: fratob_witchery
+// 1.20.1	2026-11-27T21:54:34.8515509	Block States: fratob_witchery
 40b704604664518bcf130acb41d56ca4f2b9feab assets/fratob_witchery/blockstates/crystal_ore.json
+75ea9c55514cacb6b3680ab0656531e5b7e90c45 assets/fratob_witchery/blockstates/deepslate_crystal_ore.json
 fd30ae8ddd110f9dabfd9ad6db5bac81d83c5fa0 assets/fratob_witchery/models/block/crystal_ore.json
+1eef625ced6685863601379cbf991a92d8d7a6d6 assets/fratob_witchery/models/block/deepslate_crystal_ore.json
 c1caafd399843500e2ad26298f6af6217f7b188d assets/fratob_witchery/models/item/crystal_ore.json
+f106fddbe74a427820dc509dc3668e6be920e08a assets/fratob_witchery/models/item/deepslate_crystal_ore.json

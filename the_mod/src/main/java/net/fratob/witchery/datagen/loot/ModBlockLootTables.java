@@ -26,6 +26,8 @@ public class ModBlockLootTables extends BlockLootSubProvider{
     protected void generate() {
         this.add(ModBlocks.CRYSTAL_ORE.get(),
             block -> createCopperLikeOreDrops(ModBlocks.CRYSTAL_ORE.get(), 1.0F, 3.0F, ModItems.CRYSTAL.get()));
+        this.add(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get(),
+            block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get(), 1.0F, 3.0F, ModItems.CRYSTAL.get()));
     }
 
 

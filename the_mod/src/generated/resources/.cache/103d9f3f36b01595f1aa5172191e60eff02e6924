@@ -1,0 +1,4 @@
+// 1.20.1	2026-11-27T23:34:37.6861505	Registries
+9d29088c16918ca729289cbb8852b96e1dc5c2e9 data/fratob_witchery/forge/biome_modifier/add_crystal_ore.json
+bc98f2b8b703bfe884c3514686b147a8cfeca3ca data/fratob_witchery/worldgen/configured_feature/crystal_ore.json
+15a5a173dac692d66a043d4c1cc9a35929c9c3dd data/fratob_witchery/worldgen/placed_feature/crystal_ore_placed.json
