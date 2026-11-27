@@ -22,13 +22,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(Provider pProvider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .add(ModBlocks.CRYSTAL_ORE.get());
+            .add(ModBlocks.CRYSTAL_ORE.get())
+            .add(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-            .add(ModBlocks.CRYSTAL_ORE.get());
+            .add(ModBlocks.CRYSTAL_ORE.get())
+            .add(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get());
 
         this.tag(Tags.Blocks.ORES)
-            .add(ModBlocks.CRYSTAL_ORE.get());
+            .add(ModBlocks.CRYSTAL_ORE.get())
+            .add(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get());
     }
 
 }

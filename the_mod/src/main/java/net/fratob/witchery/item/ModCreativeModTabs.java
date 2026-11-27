@@ -32,6 +32,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.MANA_POWDER.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_CRYSTAL_ORE.get());
 
                         // Regular Item
                         pOutput.accept(Items.GLOW_BERRIES);
