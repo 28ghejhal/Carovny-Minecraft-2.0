@@ -192,21 +192,9 @@
     },
     "done": true
   },
-  "fratob_witchery:recipes/misc/mana_crystal": {
-    "criteria": {
-      "has_crystal": "2026-11-26 18:51:28 +0100"
-    },
-    "done": true
-  },
   "minecraft:story/mine_diamond": {
     "criteria": {
       "diamond": "2026-11-25 22:16:17 +0100"
-    },
-    "done": true
-  },
-  "fratob_witchery:recipes/tools/wand_of_light": {
-    "criteria": {
-      "has_mana_crystal": "2026-11-26 18:51:49 +0100"
     },
     "done": true
   },
@@ -249,6 +237,18 @@
   "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
       "has_stick": "2026-11-25 22:17:10 +0100"
+    },
+    "done": true
+  },
+  "fratob_witchery:recipes/misc/mana_crystal": {
+    "criteria": {
+      "has_crystal": "2026-11-26 18:51:28 +0100"
+    },
+    "done": true
+  },
+  "fratob_witchery:recipes/tools/wand_of_light": {
+    "criteria": {
+      "has_mana_crystal": "2026-11-26 18:51:49 +0100"
     },
     "done": true
   },
