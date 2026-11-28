@@ -2,6 +2,7 @@ package net.fratob.witchery.item;
 
 import net.fratob.witchery.Witchery;
 import net.fratob.witchery.block.ModBlocks;
+import net.fratob.witchery.item.custom.WandOfLightItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +23,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> WAND_OF_LIGHT = ITEMS.register("wand_of_light", 
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new WandOfLightItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal", 
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MANA_CRYSTAL = ITEMS.register("mana_crystal", 
